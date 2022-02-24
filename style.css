@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,32 +10,29 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.menu {
-  font-weight: bold;
-  color: white;
-  font-size: 18px;
-  background-color: #1992d4;
-  display: grid;
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  grid-template-columns: 13% 5fr;
+  grid-template-rows: 1fr 1fr;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(51, 51, 51, 0.7);
+  z-index: 10;
 }
 
 .header-top {
-  height: 150px;
+  height: 6vw;
   background-color: rgb(255, 255, 255);
   display: grid;
   grid-row: 1 / 2;
-  grid-template-columns: 0.4fr 10fr 0.5fr 2fr 3fr;
+  grid-template-columns: 0.4fr 10fr 2fr 0.5fr 3fr;
   align-items: center;
   border-bottom: 2px dotted gray;
 }
 
 .content {
-  grid-template-rows: 0.2fr 1fr;
+  grid-template-rows: 6vw 1fr;
   border-top: 1px;
   border-color: #1992d4;
   background-color: #e2e8f0;
@@ -44,28 +46,28 @@
   border-color: #1992d4;
   background-color: #e2e8f0;
   display: grid;
-  grid-template-columns: 1fr 1fr 0.7fr;
-  grid-template-rows: 50px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 29vw;
+  grid-template-rows: auto 2vw;
 }
 
 .yourProjectsTitle {
   display: grid;
   grid-row: 1 / 1;
   grid-column: 1 /3;
-  font-size: 15px;
+  font-size: 0.9vw;
   font-weight: normal;
-  height: 50px;
-  margin-top: 45px;
-  margin-left: 19px;
+  height: 0.9vw;
+  margin-left: 15px;
+  margin-top: 0.5vw;
 }
 
 .yourProjects {
   display: grid;
   grid-row: 1 / 4;
   grid-column: 1 / 3;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  grid-template-rows: 50px 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3vw;
+  gap: 20px;
   margin-bottom: 20px;
 }
 
@@ -74,20 +76,56 @@
   border-radius: 12px;
   display: grid;
   width: 90%;
-  height: 200px;
   margin: 0 auto;
   margin-left: 15px;
   overflow: hidden;
+  grid-template-columns: repeat(auto-fit);
+  grid-template-rows: 1fr 0.2fr;
 }
 
-.yourProjects > div > text > h2 {
-  margin-top: 30px;
+.projectBottom {
+  align-self: center;
+  display: grid;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  grid-template-columns: 1fr 0.2fr 0.2fr;
+  grid-template-rows: 1fr;
+  justify-items: right;
+  float: right;
+}
+
+.eyeImg {
+  display: grid;
+  justify-self: center;
+}
+.vectorImg {
+  display: grid;
+  justify-self: left;
+}
+.projectBottom > img {
+  display: grid;
+  margin-bottom: 0.4vw;
+  height: 1.5vw;
+  width: 1.5vw;
+}
+
+.projectsContent {
+  display: grid;
+  grid-column: 1 / span 3;
+  grid-row: 1 / 2;
+}
+
+.projectsContent > text > h2 {
+  margin-top: 10px;
   margin-left: 15px;
+  font-size: 1vw;
 }
 
-.yourProjects > div > text > p {
+.projectsContent > text > p {
   margin-top: 5px;
   margin-left: 15px;
+  margin-right: 10px;
+  font-size: 0.9vw;
 }
 
 .announcements {
@@ -95,67 +133,67 @@
   grid-column: 3 / 4;
   grid-row: 1 / 3;
   border-radius: 12px;
-  grid-template-rows: 0.3fr 1fr;
+  grid-template-rows: 3vw 19vw;
+  grid-template-columns: 0.8fr;
+  margin-right: 10px;
+  width: 20vw;
 }
 
 .announcementsContent {
   display: grid;
-  gap: 10px;
   border-radius: 12px;
   background-color: white;
-  margin-right: 30px;
-  width: 20rem;
-}
-
-.announcements > span {
-  height: 100%;
-  display: grid;
-  font-size: 15px;
-  font-weight: normal;
+  grid-template-rows: repeat(3, 5.5vw);
+  grid-template-columns: 100%;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .announcements > span > h2 {
-  font-size: 20px;
+  font-weight: normal;
+  font-size: 1.5vw;
   display: grid;
-  justify-items: first baseline;
   align-content: center;
-  margin-top: 30px;
+  line-height: 5vw;
 }
 
-/* .announcements > div {
-  background-color: white;
-  margin-right: 10px;
-} */
-
 .announcementsContent > div {
-  border-bottom: 1px dotted grey;
+  border-bottom: 0.1vw dotted grey;
+  display: grid;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+  width: 18vw;
+  height: auto;
 }
 
 .announcementsContent > div:last-child {
   border-bottom: none;
+  margin-bottom: 0.2vw;
 }
 
 .announcementsContent > div > text > h4 {
-  margin-top: 20px;
-  margin-left: 15px;
+  margin-top: 0.6vw;
+  margin-left: 10px;
+  font-size: 0.9vw;
 }
 
 .announcementsContent > div > text > p {
-  margin-top: 10px;
-  margin-left: 15px;
+  margin-left: 10px;
+  font-size: 0.7vw;
 }
 
 .trending {
   display: grid;
   grid-column: 3 / 4;
-  grid-row: 3 / 4;
-  margin-top: 20px;
-  grid-template-rows: 0.2fr 0.4fr;
-  gap: 1rem;
+  grid-row: 2 / 3;
+  margin-top: 2.5vw;
+  grid-template-rows: 0.8vw 12vw;
+  gap: 2vw;
 }
 
 .trending > span > h2 {
-  font-size: 20px;
+  font-size: 1.5vw;
+  font-weight: normal;
 }
 
 .trending > div {
@@ -164,58 +202,103 @@
 }
 
 .trendingContent {
+  grid-row: 2 / 3;
   display: grid;
   margin-right: 30px;
-  grid-template-columns: 0.5fr 1fr;
-  width: 20rem;
-  justify-items: start;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: repeat(4, 3vw);
+  width: 19vw;
 }
 
-.trendingContent > div {
+.trendingContent > div:first-child {
   display: grid;
-  gap: 30px;
-  grid-template-rows: repeat(auto-fit, minmax(50px, 0.3fr));
+  margin-top: 0.3vw;
 }
 
-.trending1 {
-  margin-top: 10px;
-}
-
-.trendingAvatar1 {
-  height: 40px;
-  width: 40px;
+.trendingContent > div > text {
   display: grid;
-  margin-left: 50px;
-  margin-top: 5px;
+  grid-column: 2 / 3;
+  font-size: 1vw;
 }
 
 .trendingAvatar {
-  height: 40px;
-  width: 40px;
   display: grid;
-  margin-left: 50px;
-  align-items: center;
+  grid-column: 1 / 2;
+  height: 100%;
+  width: 100%;
+}
+
+.trendingAvatarImg {
+  display: grid;
+  height: 2vw;
+  width: 2vw;
+  justify-self: right;
+  margin-right: 0.3vw;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.logo > a {
+  color: white;
+  /* font-size: 25px; */
+  font-size: 1vw;
+  line-height: 3vw;
+}
+
+.logoImg {
+  width: 100%;
+  height: auto;
+}
+
+.menu {
+  font-weight: bold;
+  color: white;
+  /* font-size: 18px; */
+  font-size: 1vw;
+  background-color: #1992d4;
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  grid-template-rows: 5vw 0.4fr 0.2fr;
 }
 
 .firstMenu {
-  grid-row: 1 / 2;
-  margin-top: 40px;
-  margin-left: 30px;
-  list-style: none;
+  margin-top: 1vw;
+  grid-row: 2 / 3;
+  margin-left: 1vw;
   display: grid;
 }
 
-.secondMenu {
-  grid-row: 3 / 4;
-  margin-left: 30px;
+.firstMenuList {
+  grid-template-rows: repeat(6, 1fr);
   list-style: none;
   display: grid;
+  gap: 5px;
+}
+
+.secondMenu {
+  margin-top: 1vw;
+  grid-row: 3 / 4;
+  margin-left: 1vw;
+  display: grid;
+}
+
+.secondMenuList {
+  list-style: none;
+  display: grid;
+  gap: 5px;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .divMagnify {
   display: grid;
   justify-items: end;
-  width: 50px;
+  width: 1vw;
 }
 
 .avatar {
@@ -227,35 +310,41 @@
 }
 
 .bell {
+  height: 1.5vw;
+  width: 1.5vw;
   display: grid;
+  float: right;
+  margin-right: 30px;
 }
 
 .name {
   grid-column: 5 / 5;
   grid-row: 1 / 2;
   display: grid;
-  font-size: 25px;
+  font-size: 1.3vw;
   font-weight: bold;
 }
 
 .divInput {
   margin-left: 40px;
   border-radius: 30px;
-  width: 70%;
+  width: 100%;
 }
 
 .imgMagnify {
   margin-right: 20px;
   display: grid;
-  align-content: left;
+  margin-left: 30px;
+  height: 1.5vw;
+  width: 1.5vw;
 }
 
 .inputBar {
-  display: inline-block;
-  background-color: #b6b7b9;
-  border-radius: 30px;
+  background-color: #e2e8f0;
+  height: 1.5vw;
   width: 90%;
-  height: 20px;
+  border: none;
+  border-radius: 12px;
 }
 
 .welcome {
@@ -268,6 +357,7 @@
 .welcomeText {
   display: grid;
   right: 200px;
+  font-size: 1vw;
 }
 
 .welcomePos {
@@ -277,20 +367,21 @@
 }
 
 .avatarImgTop {
-  height: 40px;
-  width: 40px;
+  height: 1.5vw;
+  width: 1.5vw;
 }
 
 .avatarImg {
-  height: 60px;
-  width: 60px;
+  height: 3vw;
+  width: 3vw;
   display: grid;
   grid-row: 1 / 3;
 }
 
 button {
-  height: 30px;
-  width: 90px;
+  margin: 0 auto;
+  height: 1.5vw;
+  width: 4.8vw;
   background: none;
   color: inherit;
   border: none;
@@ -302,18 +393,7 @@ button {
   border-radius: 12px;
   color: white;
   background-color: #1992d4;
-}
-
-.buttonShare {
-  margin: 0 auto;
-}
-
-.buttonUpload {
-  margin: 0 auto;
-}
-
-.buttonNew {
-  margin: 0 auto;
+  font-size: 1vw;
 }
 
 .buttons {
